@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="tab me">
+      <div class="profile-picture "></div>
+      <div>
+        <h1>Mohammad Sallam Al ajoury </h1>
+        <span class="major">computer information systems</span>
+        <span>mhm0179150@ju.edu.jo</span>
+        <span>+962 78 2710 629</span>
+      </div>
+    </div>
+
+    <div class="tab">
+      <div class="education" style="width: 100%;">
+        <h1>education</h1>
+        <hr style="color: blue;">
+        <div class="card">
+          <img src="uj.png" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h4><b>university of jordan</b></h4>
+            <p>computer information systems</p>
+          </div>
+        </div>
+        <div class="item">
+          <ul>
+            <li style="padding-top: 15px;"> starting date : 28TH February 2018</li>
+            <li style="padding-top: 15px;">Graduation Date : under graduation</li>
+            <li style="padding-top: 15px;">Graduation Year : 2021</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab">
+      <div class="skills" style="width: 100%;">
+        <h1>skills</h1>
+        <hr style="color: blue;">
+        <p></p>
+        <div class="iteam1">
+          <ul>
+            <li style="padding-top: 15px;"> perfect skills in html</li>
+            <li style="padding-top: 15px;"> perfect skills in css</li>
+            <li style="padding-top: 15px;">perfect skills in JS</li>
+            <li style="padding-top: 15px;">perfect skills in c++</li>
+            <li style="padding-top: 15px;">good skills in bootstrab</li>
+            <li style="padding-top: 15px;">good skills in Java</li>
+            <li style="padding-top: 15px;">Beginner in Python</li>
+            <li style="padding-top: 15px;">Beginner in Php</li>
+          </ul>
+
+        </div>
+        <div class="iteam2">
+          <ul>
+            <li style="padding-top: 15px;"> Excellent teamwork skills</li>
+            <li style="padding-top: 15px;"> Excellent organization skills</li>
+            <li style="padding-top: 15px;">Excellent skills in organizing events</li>
+            <li style="padding-top: 15px;">Excellent problem-solving skills </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab">
+      <div class="experience" style="width: 100%;">
+        <h1>Experience</h1>
+        <hr style="color: blue;">
+        <p></p>
+        <div class="iteam3">
+          <ul>
+            <li style="padding-top: 15px;"> Two participants in the problem-solving competition at the
+              University of Jordan</li>
+            <li style="padding-top: 15px;"> Volunteer in student teams</li>
+            <li style="padding-top: 15px;">Ambassador of the Codat team at the University of Jordan</li>
+            <li style="padding-top: 15px;">Member of the IEEE team at the University of Jordan</li>
+            <li style="padding-top: 15px;">Organizing 9 programming events with the Codat team</li>
+            <li style="padding-top: 15px;">Organizing over 20 programming events with the al nasham team</li>
+            <li style="padding-top: 15px;">Attending more than 20 programming events</li>
+            <li style="padding-top: 15px;">Volunteer in the Students' Union of the University of Jordan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)"> Previous</button>
+      <div>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+
+
+  </div>
+
+  <script>
+    var currentTab = 0; 
+    showTab(currentTab);
+
+    function showTab(n) {
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "flex";
+      if (n == 0) {
+        document.getElementById("prevBtn").style.opacity = 0;
+      } else {
+        document.getElementById("prevBtn").style.opacity = 1;
+      }
+      if (n == (x.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Again";
+      } else {
+        document.getElementById("nextBtn").innerHTML = "Next";
+      }
+            fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {  
+      var x = document.getElementsByClassName("tab");
+      x[currentTab].style.display = "none";
+      currentTab = currentTab + n;
+      if (currentTab >= x.length) {
+        currentTab = 0;
+        showTab(currentTab)
+      }
+      showTab(currentTab);
+    }
+
+    function fixStepIndicator(n) {
+      var i, x = document.getElementsByClassName("step");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active", "");
+      }
+      x[n].className += " active";
+    }
+  </script>
+</body>
+
+</html>

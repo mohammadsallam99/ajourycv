@@ -1,0 +1,187 @@
+body, html {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("sitebackground.jpg");
+  background-size: 100%;
+}
+
+.main-container {
+  background-color: #fff;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 20px;
+}
+
+.me {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.me .major{
+  font-size: 1.2em;
+  text-transform: capitalize;
+  color: rgba(0,0,0,0.8);
+}
+.me h1{
+  margin: 20px 0 10px 0;
+}
+.me span{
+  display: block;
+  text-align: center;
+  color: rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  background-image: url('mypic.jpg');
+  background-size: 100%;
+  background-position: center;
+}
+
+.education h1 {
+  text-align: center;
+}
+
+.card {
+ position:absolute;
+ top: 20%;
+ left: 15%;
+  box-shadow: 0 6px 9px 0 gray;
+  width: 20%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgb(2, 27, 255);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.item {
+  font-size: 35;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+.skills h1 {
+  text-align: center;
+}
+
+.iteam1 {
+  font-size: 35;
+  position: absolute;
+  top: 12%;
+  left: 10%;
+}
+
+.iteam2 {
+  font-size: 35;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+}
+
+.experience h1 {
+  text-align: center;
+}
+
+.iteam3 {
+  font-size: 35;
+  top: 25%;
+  left: 10%;
+}
+
+button {
+  background-color: #2d00f3;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.tab {
+  display: none;
+  width: 100%;
+  height: calc(100% - 50px);
+}
+
+button {
+  background-color: #0113b8;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+.buttons {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #0113b8;
+}
+
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #0113b8;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 2;
+}
+
+.step.finish {
+  background-color: #4CAF50;
+}
